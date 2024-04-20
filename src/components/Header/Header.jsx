@@ -5,10 +5,11 @@ import profileImg from "./../../assets/img/gray.png";
 import favoritesImg from "./../../assets/img/icons/star.svg";
 import searchImg from "./../../assets/img/icons/search.svg";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 export default function Header() {
   return (
-    <div className={styles.header}>
+    <Container className={styles.header}>
       <div className={styles.headerWrapper}>
         <Link className={styles.profile}>
           <img className={styles.profileImg} src={profileImg} alt="profile" />
@@ -26,13 +27,9 @@ export default function Header() {
             aria-label="Поиск"
           />
         </InputGroup>
-
-        <Link className={styles.favorites}>
-          <img className={styles.favoritesImg} src={favoritesImg} alt="favorites" />
-        </Link>
       </div>
 
       <div className={styles.divider}></div>
-    </div>
+    </Container>
   );
 }

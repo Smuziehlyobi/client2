@@ -1,24 +1,43 @@
-.cardInContainer {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 10px;
-  justify-content: space-between;
-}
-
-.cardInItem {
-
-}
-
-.cardNumber {
-  display: flex;
-  align-items: flex-end;
+.title {
+  margin-top: 52px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .QrPayment {
   display: block;
   margin: 16px auto 0;
+  font-weight: 600;
 }
 
 .operationHistory {
   margin-top: 16px;
+}
+
+.walletWrapper {
+  padding-top: 16px;
+  padding-bottom: 32px;
+  background: linear-gradient(143deg, #92d0e9 0%, #c4edfe 100%);
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.customButtonWrapper {
+  width: 264px;
+  margin: 0 auto;
+  margin-top: 34px;
+}
+
+.buttonImg {
+  fill: var(--primary);
+  transition: 0.2s;
+}
+
+.customButtonWrapper:hover .buttonImg {
+  fill: #ffffff;
 }

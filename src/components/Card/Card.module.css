@@ -1,0 +1,40 @@
+.card {
+  width: 100%;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardColumn {
+  position: relative;
+  width: 50%;
+  flex-shrink: 1;
+}
+
+.badge {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.balance {
+  margin-top: 38px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.name {
+  font-size: 20px;
+  font-weight: 400;
+  color: #8d8d8d;
+}
+
+.cardNumber {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #8d8d8d;
+}
