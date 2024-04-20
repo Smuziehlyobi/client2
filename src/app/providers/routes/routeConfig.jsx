@@ -1,7 +1,7 @@
 
 // По аналогии расширять компоненты начиная с appRoutes
-import Login from "../../../components/Login/Login.jsx";
-import MainPage from "../../../components/MainPage/MainPage.jsx";
+import Login from "../../../pages/Login/Login.jsx";
+import MainPage from "../../../pages/MainPage.jsx";
 
 export const appRoutes = {
   MAIN : 'main',
