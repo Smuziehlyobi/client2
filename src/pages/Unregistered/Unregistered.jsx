@@ -8,11 +8,27 @@ import saleImg from "./../../assets/img/sale.svg";
 import studyImg from "./../../assets/img/study.svg";
 import News from "../../components/News/News";
 import Privileges from "../../components/Privileges/Privileges";
+import ciCardImg from "./../../assets/img/ci-card.jpg";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 export default function Unregistered() {
   return (
     <>
-      <img className={styles.logo} src={logo} alt="logo" />
+      <Container className={styles.mainSection}>
+        <header className={styles.headerTitle}>Карта жителя Ростова</header>
+        <h1 className={styles.title}>Оформите карту жителя Ростова - получите скидки</h1>
+        <h2 className={styles.subtitle}>
+          Множество льгот для пенсионеров, студентов, и школьников{" "}
+        </h2>
+
+        <div className={styles.buttonWrapper}>
+          <CustomButton className={styles.getCardButton}>Получить карту</CustomButton>
+        </div>
+
+        <img src={ciCardImg} alt="ciCardImg" className={styles.ciCardImg} />
+      </Container>
+
+      {/* <img className={styles.logo} src={logo} alt="logo" />
 
       <div className={styles.title}>
         Карта жителя Ростова — это именная пластиковая карта, которая выдается жителям
@@ -64,10 +80,10 @@ export default function Unregistered() {
           <img src={saleImg} alt="sale" className={styles.benefitsImg} />
           <div className={styles.benefitsText}>Бонусы за оплату по QR-коду</div>
         </li>
-      </ul>
+      </ul> */}
 
-      <News />
-      <Privileges />
+      {/* <News />
+      <Privileges /> */}
     </>
   );
 }
