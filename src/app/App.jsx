@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import Header from "../components/Header/Header.jsx";
 import "./App.css";
 import AppRouter from "./providers/routes/AppRouter.jsx";
+import NavBar from "../components/NavBar/NavBar.jsx";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <AppRouter />
       </Container>
+      <NavBar/>
     </div>
   );
 }

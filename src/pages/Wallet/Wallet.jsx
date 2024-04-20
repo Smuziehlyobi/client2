@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import walletCard from '../../assets/img/icons/wallet-card.svg'
 import Styles from "./Wallet.module.css"
-import {Button, Modal} from "react-bootstrap";
+import {Button, Container, Modal} from "react-bootstrap";
 
 const Wallet = () => {
   const [showPaymentHistory, setShowPaymentHistory] = useState(false);
@@ -47,10 +47,12 @@ const Wallet = () => {
         animation={false}
         onHide={() => setShowPaymentHistory(false)}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>История операций</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Modal body content</Modal.Body>
+        <Container>
+          <Modal.Header closeButton>
+            <Modal.Title>История операций</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Modal body content</Modal.Body>
+        </Container>
       </Modal>
     </div>
   );
