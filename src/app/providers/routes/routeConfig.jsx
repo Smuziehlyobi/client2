@@ -1,5 +1,5 @@
 // По аналогии расширять компоненты начиная с appRoutes
-import Unregistered from "../../../components/Unregistered/Unregistered.jsx";
+import Unregistered from "../../../pages/Unregistered/Unregistered.jsx";
 import Login from "../../../pages/Login/Login.jsx";
 import MainPage from "../../../pages/MainPage.jsx";
 

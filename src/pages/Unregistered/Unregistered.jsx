@@ -6,6 +6,7 @@ import transportImg from "./../../assets/img/transport.svg";
 import documentsImg from "./../../assets/img/documents.svg";
 import saleImg from "./../../assets/img/sale.svg";
 import studyImg from "./../../assets/img/study.svg";
+import News from "../../components/News/News";
 
 export default function Unregistered() {
   return (
@@ -63,6 +64,8 @@ export default function Unregistered() {
           <div className={styles.benefitsText}>Бонусы за оплату по QR-коду</div>
         </li>
       </ul>
+
+      <News />
     </>
   );
 }
