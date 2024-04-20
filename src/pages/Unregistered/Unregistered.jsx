@@ -10,7 +10,7 @@ import News from "../../components/News/News";
 import Privileges from "../../components/Privileges/Privileges";
 import ciCardImg from "./../../assets/img/ci-card.jpg";
 import CustomButton from "../../components/CustomButton/CustomButton";
-import CardBenefits from "../../app/CardBenefits/CardBenefits";
+import CardBenefits from "../../components/CardBenefits/CardBenefits";
 
 export default function Unregistered() {
   return (
@@ -30,6 +30,7 @@ export default function Unregistered() {
       </Container>
 
       <CardBenefits />
+      <News />
 
       {/* <img className={styles.logo} src={logo} alt="logo" />
 

@@ -1,5 +1,5 @@
 import React from "react";
-import grayImg from "./../../assets/img/gray.png";
+import exampleImg from "./../../assets/img/example-img.png";
 import NewsItem from "../NewsItem/NewsItem";
 import styles from "./News.module.css";
 
@@ -9,19 +9,19 @@ export default function News() {
       id: 1,
       title: "Новость 1",
       descr: "Описание 1",
-      img: grayImg,
+      img: exampleImg,
     },
     {
       id: 2,
       title: "Новость 2",
       descr: "Описание 2",
-      img: grayImg,
+      img: exampleImg,
     },
     {
       id: 3,
       title: "Новость 3",
       descr: "Описание 3",
-      img: grayImg,
+      img: exampleImg,
     },
   ];
   return (

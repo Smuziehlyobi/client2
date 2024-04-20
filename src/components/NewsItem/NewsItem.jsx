@@ -1,18 +1,19 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import styles from "./NewsItem.module.css";
+import CustomButton from "../CustomButton/CustomButton";
 
 export default function NewsItem({ title, descr, imgSrc }) {
   return (
-    <Card className={styles.cardWrapper}>
-      <Card.Img className={styles.img} variant="top" src={imgSrc} />
-      <Card.Body className={styles.body}>
-        <Card.Title className={styles.title}>{title}</Card.Title>
-        <Card.Text className={styles.descr}>{descr}</Card.Text>
-        <Button className={styles.button} variant="success">
+    <div className={styles.cardWrapper}>
+      <img className={styles.img} variant="top" src={imgSrc} />
+      <div className={styles.title}>{title}</div>
+      <div className={styles.descr}>{descr}</div>
+      <div className={styles.buttonWrapper}>
+        <CustomButton color="violet" className={styles.button} variant="success">
           Прочитать новость
-        </Button>
-      </Card.Body>
-    </Card>
+        </CustomButton>
+      </div>
+    </div>
   );
 }

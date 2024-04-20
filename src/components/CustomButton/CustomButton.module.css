@@ -1,5 +1,5 @@
 .button {
-  width: 190px;
+  width: 100%;
   height: 54px;
   background-color: inherit;
   display: flex;
@@ -15,4 +15,14 @@
 .button:hover {
   background-color: #ffffff;
   color: var(--text);
+}
+
+.violet {
+  border: 3px solid var(--primary);
+  color: var(--primary);
+}
+
+.violet:hover {
+  background-color: var(--primary);
+  color: #ffffff;
 }
