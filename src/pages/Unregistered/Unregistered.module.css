@@ -61,7 +61,7 @@
 }
 
 .title {
-  margin-top: 30px;
+  margin-top: 60px;
   text-align: center;
   font-size: 22px;
   font-weight: 500;
@@ -71,7 +71,7 @@
 .subtitle {
   width: 240px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;
@@ -82,14 +82,14 @@
   width: fit-content;
   display: block;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .ciCardImg {
+  display: block;
   width: 270px;
   height: 173px;
   margin: 0 auto;
-  margin-top: 42px;
-  display: block;
+  margin-top: 70px;
   transform: rotate(-12deg);
 }

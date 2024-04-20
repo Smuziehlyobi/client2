@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styles from "./Unregistered.module.css";
 import logo from "./../../assets/img/logo.svg";
 import transportImg from "./../../assets/img/transport.svg";
@@ -10,6 +10,7 @@ import News from "../../components/News/News";
 import Privileges from "../../components/Privileges/Privileges";
 import ciCardImg from "./../../assets/img/ci-card.jpg";
 import CustomButton from "../../components/CustomButton/CustomButton";
+import CardBenefits from "../../app/CardBenefits/CardBenefits";
 
 export default function Unregistered() {
   return (
@@ -27,6 +28,8 @@ export default function Unregistered() {
 
         <img src={ciCardImg} alt="ciCardImg" className={styles.ciCardImg} />
       </Container>
+
+      <CardBenefits />
 
       {/* <img className={styles.logo} src={logo} alt="logo" />
 
