@@ -64,10 +64,12 @@ const Wallet = () => {
         fullscreen={true}
         animation={false}
         onHide={() => setShowPaymentHistory(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>История операций</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Modal body content</Modal.Body>
+        <Container>
+          <Modal.Header closeButton>
+            <Modal.Title>История операций</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Modal body content</Modal.Body>
+        </Container>
       </Modal>
     </div>
   );
