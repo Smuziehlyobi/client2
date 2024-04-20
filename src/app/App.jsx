@@ -1,15 +1,13 @@
 import "./App.css";
-import { Route, Routes } from "react-router";
-import MainPage from "../pages/MainPage.jsx";
+import AppRouter from "./providers/routes/AppRouter.jsx";
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<MainPage />}></Route>
-        <Route path=""></Route>
-      </Routes>
-    </>
+    <div className={'app'}>
+      <div className="content-page">
+        <AppRouter/>
+      </div>
+    </div>
   );
 }
 
