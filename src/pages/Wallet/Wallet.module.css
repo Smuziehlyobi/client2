@@ -1,0 +1,24 @@
+.cardInContainer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 10px;
+  justify-content: space-between;
+}
+
+.cardInItem {
+
+}
+
+.cardNumber {
+  display: flex;
+  align-items: flex-end;
+}
+
+.QrPayment {
+  display: block;
+  margin: 16px auto 0;
+}
+
+.operationHistory {
+  margin-top: 16px;
+}
