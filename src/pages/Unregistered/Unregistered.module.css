@@ -27,6 +27,7 @@
 
 .benefitsList {
   margin-top: 18px;
+  display: block;
 }
 
 .benefitsList li {
