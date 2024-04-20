@@ -1,0 +1,47 @@
+.title {
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.listTitle {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--accent-text);
+}
+
+.possibilitiesList {
+  padding-left: 20px;
+  list-style-type: disc !important;
+}
+
+.possibilitiesList li {
+  margin-top: 8px;
+}
+
+.benefitsTitle {
+  margin-top: 24px;
+  font-size: 20px;
+  color: var(--accent-text);
+}
+
+.benefitsList {
+  margin-top: 18px;
+}
+
+.benefitsList li {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.benefitsImg {
+  width: 60px;
+  height: 60px;
+}
+
+.benefitsText {
+  text-align: left;
+  font-size: 14px;
+}

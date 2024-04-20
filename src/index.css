@@ -3,6 +3,7 @@
 
 :root {
   --text: #01000c;
+  --accent-text: #3aaa35;
   --primary: #50b848;
   --bg-green-200: #e9feec;
   --bg-blue-200: #e0efff;
@@ -15,4 +16,5 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: "Montserrat";
+  color: var(--text);
 }
