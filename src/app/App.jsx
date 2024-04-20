@@ -9,11 +9,10 @@ import axios from "axios";
 function App() {
   return (
     <div className={"app"}>
-      <Container className="content-page">
-        <Header />
+      <div className="content-page">
         <AppRouter />
-      </Container>
-      <NavBar/>
+      </div>
+      <NavBar />
     </div>
   );
 }

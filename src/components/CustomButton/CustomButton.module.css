@@ -9,6 +9,7 @@
   border-radius: 9999px;
   color: #ffffff;
   margin: 0 auto;
+  font-weight: 600;
   transition: all 0.2s;
 }
 
@@ -25,4 +26,15 @@
 .violet:hover {
   background-color: var(--primary);
   color: #ffffff;
+}
+
+.blue {
+  border: 3px solid var(--blue-btn);
+  background-color: var(--blue-btn);
+  color: #ffffff;
+}
+
+.blue:hover {
+  background-color: inherit;
+  color: var(--blue-btn);
 }

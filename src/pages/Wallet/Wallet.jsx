@@ -22,11 +22,7 @@ const Wallet = () => {
         <Card />
 
         <div className={Styles.customButtonWrapper}>
-          <CustomButton
-            color="violet"
-            style={{ fontWeight: 600 }}
-            className={Styles.QrPayment}
-            variant="outline-success">
+          <CustomButton color="violet" style={{ fontWeight: 600 }} variant="outline-success">
             <div className={Styles.buttonContent}>
               <svg
                 width="18"
@@ -54,9 +50,11 @@ const Wallet = () => {
       </Container>
 
       <div className={`d-grid gap-2 ${Styles.operationHistory}`}>
-        <Button onClick={() => handleShow()} variant="secondary" size="lg">
-          История операций
-        </Button>
+        <div className={Styles.historyButtonWrapper}>
+          <CustomButton color="blue" onClick={() => handleShow()} variant="secondary" size="lg">
+            История операций
+          </CustomButton>
+        </div>
       </div>
 
       <Modal

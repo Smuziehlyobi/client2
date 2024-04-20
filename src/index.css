@@ -6,6 +6,7 @@
   --gray-text: #667479;
   --accent-text: #3aaa35;
   --primary: #8253d8;
+  --blue-btn: #00a4e5;
   --bg-green-200: #e9feec;
   --bg-blue-200: #e0efff;
   --bg-purple-200: #e2e4f3;
@@ -18,4 +19,5 @@ body {
   box-sizing: border-box;
   font-family: "Montserrat";
   color: var(--text);
+  padding-bottom: 100px;
 }
