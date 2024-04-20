@@ -1,4 +1,4 @@
-.title {
+/* .title {
   margin-top: 20px;
   font-size: 20px;
   line-height: 28px;
@@ -27,6 +27,7 @@
 
 .benefitsList {
   margin-top: 18px;
+  display: block;
 }
 
 .benefitsList li {
@@ -44,4 +45,52 @@
 .benefitsText {
   text-align: left;
   font-size: 14px;
+} */
+
+.mainSection {
+  background-color: #8253d8;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.headerTitle {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.title {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.subtitle {
+  width: 240px;
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.buttonWrapper {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 190px;
+}
+
+.ciCardImg {
+  display: block;
+  width: 270px;
+  height: 173px;
+  margin: 0 auto;
+  margin-top: 70px;
+  transform: rotate(-12deg);
 }

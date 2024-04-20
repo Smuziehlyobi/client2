@@ -3,8 +3,9 @@
 
 :root {
   --text: #01000c;
+  --gray-text: #667479;
   --accent-text: #3aaa35;
-  --primary: #50b848;
+  --primary: #8253d8;
   --bg-green-200: #e9feec;
   --bg-blue-200: #e0efff;
   --bg-purple-200: #e2e4f3;

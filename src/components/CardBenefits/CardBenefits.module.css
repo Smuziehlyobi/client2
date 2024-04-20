@@ -1,0 +1,34 @@
+.cardBenefits {
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.list li {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.imgWrapper {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  border-radius: 100%;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 400;
+}
