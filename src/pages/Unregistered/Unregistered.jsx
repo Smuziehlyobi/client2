@@ -7,6 +7,7 @@ import documentsImg from "./../../assets/img/documents.svg";
 import saleImg from "./../../assets/img/sale.svg";
 import studyImg from "./../../assets/img/study.svg";
 import News from "../../components/News/News";
+import Privileges from "../../components/Privileges/Privileges";
 
 export default function Unregistered() {
   return (
@@ -66,6 +67,7 @@ export default function Unregistered() {
       </ul>
 
       <News />
+      <Privileges />
     </>
   );
 }
