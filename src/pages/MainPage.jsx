@@ -1,5 +1,10 @@
 import React from "react";
+import { Button, Container, Form } from "react-bootstrap";
 
 export default function MainPage() {
-  return <div>MainPage</div>;
+  return (
+    <Container>
+      <Form.Control type="text" placeholder="Enter email" />
+    </Container>
+  );
 }
