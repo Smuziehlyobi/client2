@@ -3,8 +3,17 @@ import { Container, Form } from "react-bootstrap";
 import styles from "./Settings.module.css";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import Header from "../../components/Header/Header";
+import {useAppDispatch} from "../../app/providers/Store/hooks.js";
+import {logoutAsync} from "../../features/auth/authSlice.js";
 
 export default function Settings() {
+  const dispatch = useAppDispatch()
+
+
+  const handleLogout = () => {
+    dispatch(logoutAsync())
+  }
+
   return (
     <div>
       <Header />
@@ -39,8 +48,12 @@ export default function Settings() {
           </Form.Group>
 
           <div className={styles.submitButtonWrapper}>
-            <CustomButton color="violet" variant="primary" type="submit">
+            <CustomButton color="violet" variant="primary">
               Сохранить
+            </CustomButton>
+
+            <CustomButton onClick={() => handleLogout()} color="violet" variant="primary">
+              Выйти из аккаунта
             </CustomButton>
           </div>
         </Form>

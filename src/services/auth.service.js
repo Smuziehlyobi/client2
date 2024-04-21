@@ -1,5 +1,4 @@
 import TokenService from "./token.service.js";
-import axios from "axios";
 import http from "./http.js";
 
 class AuthService {
@@ -22,17 +21,29 @@ class AuthService {
     TokenService.removeUser()
   }
 
-  async register(username, email, password) {
+  async register({firstName,
+                   lastName,
+                   patronymic,
+                   repeatPassword,
+                   password,
+                   email}) {
     return http
       .post("/auth/signup", {
-        firstName,
-        lastName,
-        patronymic,
-        repeatPassword,
-        password,
-        email
+        firstName: firstName,
+        lastName: lastName,
+        patronymic: patronymic,
+        repeatPassword: repeatPassword,
+        password: password,
+        email: email
       })
       .then(response => {
+        if (response.data.accessToken) {
+          TokenService.setUser({
+            accessToken : response.data.accessToken,
+            refreshToken : response.data.refreshToken,
+          })
+        }
+
         return response.data
       })
   }
