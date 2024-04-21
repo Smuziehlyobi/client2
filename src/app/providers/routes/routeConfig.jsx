@@ -5,11 +5,14 @@ import Wallet from "../../../pages/Wallet/Wallet.jsx";
 import Settings from "../../../pages/Settings/Settings.jsx";
 import News from "../../../pages/News/News.jsx";
 import Privileges from "../../../pages/Privileges/Privileges.jsx";
+import SignUp from "../../../components/SignUp/SignUp.jsx";
 import Hospitals from "../../../pages/Hospitals/Hospitals.jsx";
+
 
 export const appRoutes = {
   UNREGISTERED: "createcard",
   LOGIN: "login",
+  SIGNUP: "signup",
   WALLET: "wallet",
   NOT_FOUND: "not_found",
   SETTINGS: "settings",
@@ -22,6 +25,7 @@ export const RoutePaths = {
   [appRoutes.WALLET]: "/",
   [appRoutes.UNREGISTERED]: "/createcard",
   [appRoutes.LOGIN]: "/login",
+  [appRoutes.SIGNUP]: "/signup",
   [appRoutes.NOT_FOUND]: "*",
   [appRoutes.SETTINGS]: "/settings",
   [appRoutes.NEWS]: "/news",
@@ -36,6 +40,10 @@ export const RouteConfig = {
   [appRoutes.LOGIN]: {
     path: RoutePaths.login,
     element: <Login />,
+  },
+  [appRoutes.SIGNUP]: {
+    path: RoutePaths.signup,
+    element: <SignUp/>
   },
   [appRoutes.WALLET]: {
     path: RoutePaths.wallet,

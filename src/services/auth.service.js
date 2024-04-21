@@ -1,4 +1,6 @@
 import TokenService from "./token.service.js";
+import axios from "axios";
+import http from "./http.js";
 
 class AuthService {
   async login(username, password) {
@@ -23,9 +25,12 @@ class AuthService {
   async register(username, email, password) {
     return http
       .post("/auth/signup", {
-        username,
-        email,
-        password
+        firstName,
+        lastName,
+        patronymic,
+        repeatPassword,
+        password,
+        email
       })
       .then(response => {
         return response.data
