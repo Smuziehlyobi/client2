@@ -19,18 +19,13 @@ const initialState = user.accessToken
 export const registerAsync = createAsyncThunk(
   "auth/signup",
   async (userRegister, thunkApi) => {
-    // if (userRegister.password !== userRegister.passwordConf) {
-    //   thunkApi.dispatch(setError(`Your password doesn't match`))
-    //   return thunkApi.rejectWithValue(`Your password doesn't match`)
-    // }
+    if (userRegister.password !== userRegister.repeatPassword) {
+      thunkApi.dispatch(setError(`Your password doesn't match`))
+      return thunkApi.rejectWithValue(`Your password doesn't match`)
+    }
     try {
       const response = await authService.register(
-        userRegister.firstName,
-        userRegister.lastName,
-        userRegister.patronymic,
-        userRegister.repeatPassword,
-        userRegister.password,
-        userRegister.email
+        userRegister
       )
       console.log(response)
       if (response.status === 200) {
@@ -86,7 +81,7 @@ export const authSlice = createSlice({
       state.error = action.payload
     },
     refreshToken: (state, { payload }) => {
-      state.user.accessToken = payload.acessToken
+      state.user.accessToken = payload.accessToken
       state.user.refreshToken = payload.refreshToken
     }
   },
@@ -100,7 +95,9 @@ export const authSlice = createSlice({
       .addCase(loginAsync.rejected, state => {
         state.isLoggedIn = false
       })
-      .addCase(registerAsync.fulfilled, state => {
+      .addCase(registerAsync.fulfilled, (state, { payload }) => {
+        state.isLoggedIn = true
+        state.user = payload.user
         state.error = ""
       })
       .addCase(logoutAsync.fulfilled, state => {

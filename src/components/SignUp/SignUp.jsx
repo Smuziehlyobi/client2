@@ -6,6 +6,7 @@ import { registerAsync } from "../../features/auth/authSlice.js";
 import { appRoutes, RoutePaths } from "../../app/providers/routes/routeConfig.jsx";
 import styles from "./SignUp.module.css";
 import CustomButton from "../CustomButton/CustomButton.jsx";
+import {Link} from "react-router-dom";
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ const SignUp = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
       dispatch(
@@ -36,9 +37,7 @@ const SignUp = () => {
           repeatPassword: formData.repeatPassword,
           email: formData.email,
         }),
-      )
-        .then(() => navigate(RoutePaths[appRoutes.WALLET]))
-        .catch(() => console.log("error :)"));
+      ).then(() => navigate(RoutePaths[appRoutes.WALLET]))
     } catch (error) {
       console.log(error);
     }
@@ -52,17 +51,6 @@ const SignUp = () => {
       <Container>
         <form>
           <div className="mb-3">
-            <label>Имя</label>
-            <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleInputChange}
-              className="form-control"
-              placeholder="Имя"
-            />
-          </div>
-          <div className="mb-3">
             <label>Фамилия</label>
             <input
               type="text"
@@ -70,7 +58,18 @@ const SignUp = () => {
               value={formData.lastName}
               onChange={handleInputChange}
               className="form-control"
-              placeholder="Фамилия"
+              placeholder="Иванов"
+            />
+          </div>
+          <div className="mb-3">
+            <label>Имя</label>
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleInputChange}
+              className="form-control"
+              placeholder="Иван"
             />
           </div>
           <div className="mb-3">
@@ -81,7 +80,7 @@ const SignUp = () => {
               value={formData.patronymic}
               onChange={handleInputChange}
               className="form-control"
-              placeholder="Отчество"
+              placeholder="Владимирович"
             />
           </div>
           <div className="mb-3">
@@ -103,7 +102,7 @@ const SignUp = () => {
               value={formData.password}
               onChange={handleInputChange}
               className="form-control"
-              placeholder="Пароль"
+              placeholder="*****"
             />
           </div>
           <div className="mb-3">
@@ -123,7 +122,7 @@ const SignUp = () => {
             </CustomButton>
           </div>
           <p className="forgot-password text-right">
-            Уже зарегестрированы <a href="/sign-in">войти?</a>
+            Уже зарегестрированы? <Link to={RoutePaths[appRoutes.LOGIN]}>войти</Link>
           </p>
         </form>
       </Container>

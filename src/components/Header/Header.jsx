@@ -2,16 +2,16 @@ import React from "react";
 import { Form, InputGroup } from "react-bootstrap";
 import styles from "./Header.module.css";
 import profileImg from "./../../assets/img/gray.png";
-import favoritesImg from "./../../assets/img/icons/star.svg";
 import searchImg from "./../../assets/img/icons/search.svg";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import {appRoutes, RoutePaths} from "../../app/providers/routes/routeConfig.jsx";
 
 export default function Header() {
   return (
     <Container className={styles.header}>
       <div className={styles.headerWrapper}>
-        <Link className={styles.profile}>
+        <Link to={RoutePaths[appRoutes.SETTINGS]} className={styles.profile}>
           <img className={styles.profileImg} src={profileImg} alt="profile" />
         </Link>
 

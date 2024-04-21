@@ -10,6 +10,8 @@ import NewsList from "../../components/NewsList/NewsList";
 import ciCardImg from "./../../assets/img/ci-card.jpg";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CardBenefits from "../../components/CardBenefits/CardBenefits";
+import {Link} from "react-router-dom";
+import {appRoutes, RoutePaths} from "../../app/providers/routes/routeConfig.jsx";
 
 export default function Unregistered() {
   return (
@@ -22,7 +24,9 @@ export default function Unregistered() {
         </h2>
 
         <div className={styles.buttonWrapper}>
-          <CustomButton>Получить карту</CustomButton>
+          <Link to={RoutePaths[appRoutes.SIGNUP]}>
+            <CustomButton>Получить карту</CustomButton>
+          </Link>
         </div>
 
         <img src={ciCardImg} alt="ciCardImg" className={styles.ciCardImg} />
