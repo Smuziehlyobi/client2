@@ -1,6 +1,7 @@
 import tokenService from "../../services/token.service.js";
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import authService from "../../services/auth.service.js";
+import axios from "axios";
 
 const user = tokenService.getUser()
 const initialState = user.accessToken
@@ -16,17 +17,20 @@ const initialState = user.accessToken
   }
 
 export const registerAsync = createAsyncThunk(
-  "auth/register",
+  "auth/signup",
   async (userRegister, thunkApi) => {
-    if (userRegister.password !== userRegister.passwordConf) {
-      thunkApi.dispatch(setError(`Your password doesn't match`))
-      return thunkApi.rejectWithValue(`Your password doesn't match`)
-    }
+    // if (userRegister.password !== userRegister.passwordConf) {
+    //   thunkApi.dispatch(setError(`Your password doesn't match`))
+    //   return thunkApi.rejectWithValue(`Your password doesn't match`)
+    // }
     try {
       const response = await authService.register(
-        userRegister.username,
-        userRegister.email,
-        userRegister.password
+        userRegister.firstName,
+        userRegister.lastName,
+        userRegister.patronymic,
+        userRegister.repeatPassword,
+        userRegister.password,
+        userRegister.email
       )
       console.log(response)
       if (response.status === 200) {
@@ -46,7 +50,7 @@ export const registerAsync = createAsyncThunk(
 )
 
 export const loginAsync = createAsyncThunk(
-  "auth/login",
+  "auth/signin",
   async (userCredentials, thunkApi) => {
     console.log(userCredentials)
     try {
