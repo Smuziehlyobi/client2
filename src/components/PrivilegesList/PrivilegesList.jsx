@@ -1,7 +1,7 @@
 import React from "react";
 import PrivelegesItem from "../PrivelegesItem/PrivelegesItem";
 import styles from "./PrivilegesList.module.css";
-import exampleImg from "./../../assets/img/example-img.png";
+import exampleImg from "./../../assets/img/example-img.jpg";
 
 export default function PrivilegesList() {
   const privilegesList = [

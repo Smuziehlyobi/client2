@@ -1,5 +1,5 @@
 import React from "react";
-import exampleImg from "./../../assets/img/example-img.png";
+import exampleImg from "./../../assets/img/example-img.jpg";
 import NewsItem from "../NewsItem/NewsItem";
 import styles from "./NewsList.module.css";
 

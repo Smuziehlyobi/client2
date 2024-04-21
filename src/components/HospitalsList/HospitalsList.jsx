@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./HospitalsList.module.css";
-import exampleImg from "./../../assets/img/example-img.png";
+import exampleImg from "./../../assets/img/example-img.jpg";
 import HospitalsListItem from "../HospitalsListItem/HospitalsListItem";
 import { Container } from "react-bootstrap";
 

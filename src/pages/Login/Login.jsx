@@ -42,7 +42,7 @@ const Login = () => {
 
       <Container>
         <form>
-          <h3 className={styles.loginTitle}>Войти</h3>
+          <h3 className={styles.loginTitle}>Вход</h3>
           <div className="mb-3">
             <label>Электронная почта</label>
             <input

@@ -10,7 +10,7 @@ export default function NewsItem({ title, descr, imgSrc }) {
       <div className={styles.title}>{title}</div>
       <div className={styles.descr}>{descr}</div>
       <div className={styles.buttonWrapper}>
-        <CustomButton color="violet" className={styles.button} variant="success">
+        <CustomButton color="violet" variant="success">
           Прочитать новость
         </CustomButton>
       </div>
