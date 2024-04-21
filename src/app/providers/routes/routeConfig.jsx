@@ -2,12 +2,14 @@
 import Unregistered from "../../../pages/Unregistered/Unregistered.jsx";
 import Login from "../../../pages/Login/Login.jsx";
 import Wallet from "../../../pages/Wallet/Wallet.jsx";
+import Settings from "../../../pages/Settings/Settings.jsx";
 
 export const appRoutes = {
   UNREGISTERED: "createcard",
   LOGIN: "login",
   WALLET: "wallet",
   NOT_FOUND: "not_found",
+  SETTINGS: "settings",
 };
 
 export const RoutePaths = {
@@ -15,6 +17,7 @@ export const RoutePaths = {
   [appRoutes.UNREGISTERED]: "/createcard",
   [appRoutes.LOGIN]: "/login",
   [appRoutes.NOT_FOUND]: "*",
+  [appRoutes.SETTINGS]: "/settings",
 };
 export const RouteConfig = {
   [appRoutes.UNREGISTERED]: {
@@ -32,5 +35,9 @@ export const RouteConfig = {
   [appRoutes.NOT_FOUND]: {
     path: RoutePaths.not_found,
     element: <>NotFoundComponent</>,
+  },
+  [appRoutes.SETTINGS]: {
+    path: RoutePaths.settings,
+    element: <Settings />,
   },
 };
