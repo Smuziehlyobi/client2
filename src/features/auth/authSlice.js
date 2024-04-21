@@ -28,7 +28,7 @@ export const registerAsync = createAsyncThunk(
         userRegister
       )
       console.log(response)
-      if (response.status === 200) {
+      if (response.accessToken) {
         return response
       }
     } catch (_error) {
@@ -71,6 +71,14 @@ export const loginAsync = createAsyncThunk(
 
 export const logoutAsync = createAsyncThunk("auth/logout", async () => {
   authService.logout()
+})
+
+export const payForQr = createAsyncThunk("auth/qr", async ()=> {
+  authService.payForQr({
+    "id": 1,
+    "value" : 50000,
+    "name" : "купил подписку"
+  })
 })
 
 export const authSlice = createSlice({
