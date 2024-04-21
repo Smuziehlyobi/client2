@@ -5,6 +5,9 @@
 }
 
 .submitButtonWrapper {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
   width: 264px;
   margin: 0 auto;
   margin-top: 24px;
