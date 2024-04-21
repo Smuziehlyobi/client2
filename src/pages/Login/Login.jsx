@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Container } from "react-bootstrap";
-import { loginAsync } from "../../features/auth/authSlice.js";
-import { useAppDispatch } from "../../app/providers/Store/hooks.js";
+import {loginAsync, selectAuth} from "../../features/auth/authSlice.js";
+import {useAppDispatch, useAppSelector} from "../../app/providers/Store/hooks.js";
 import { useNavigate } from "react-router";
 import { appRoutes, RoutePaths } from "../../app/providers/routes/routeConfig.jsx";
 import styles from "./Login.module.css";
@@ -14,24 +14,28 @@ const Login = () => {
   });
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const { isLoggedIn } = useAppSelector(selectAuth)
 
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate(RoutePaths[appRoutes.WALLET])
+    }
+  }, [isLoggedIn]);
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (event) => {
+
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    try {
-      dispatch(
-        loginAsync({
-          username: formData.username,
-          password: formData.password,
-        }),
-      ).then(() => navigate(RoutePaths[appRoutes.WALLET]));
-    } catch (error) {
-      console.log(error);
-    }
+    dispatch(
+      loginAsync({
+        username: formData.username,
+        password: formData.password,
+      }),
+    )
 
     setFormData({ username: "", password: "" });
   };

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import { Container } from "react-bootstrap";
-import { useAppDispatch } from "../../app/providers/Store/hooks.js";
+import {useAppDispatch, useAppSelector} from "../../app/providers/Store/hooks.js";
 import { useNavigate } from "react-router";
-import { registerAsync } from "../../features/auth/authSlice.js";
+import {registerAsync, selectAuth} from "../../features/auth/authSlice.js";
 import { appRoutes, RoutePaths } from "../../app/providers/routes/routeConfig.jsx";
 import styles from "./SignUp.module.css";
 import CustomButton from "../CustomButton/CustomButton.jsx";
@@ -19,6 +19,13 @@ const SignUp = () => {
   });
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const { isLoggedIn } = useAppSelector(selectAuth)
+
+  useEffect(() => {
+    if (isLoggedIn) {
+      navigate(RoutePaths[appRoutes.WALLET])
+    }
+  }, [isLoggedIn]);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -37,7 +44,7 @@ const SignUp = () => {
           repeatPassword: formData.repeatPassword,
           email: formData.email,
         }),
-      ).then(() => navigate(RoutePaths[appRoutes.WALLET]))
+      )
     } catch (error) {
       console.log(error);
     }

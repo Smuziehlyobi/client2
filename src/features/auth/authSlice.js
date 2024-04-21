@@ -28,7 +28,7 @@ export const registerAsync = createAsyncThunk(
         userRegister
       )
       console.log(response)
-      if (response.status === 200) {
+      if (response.accessToken) {
         return response
       }
     } catch (_error) {
