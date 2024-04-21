@@ -4,6 +4,7 @@ import Login from "../../../pages/Login/Login.jsx";
 import Wallet from "../../../pages/Wallet/Wallet.jsx";
 import Settings from "../../../pages/Settings/Settings.jsx";
 import News from "../../../pages/News/News.jsx";
+import Privileges from "../../../pages/Privileges/Privileges.jsx";
 
 export const appRoutes = {
   UNREGISTERED: "createcard",
@@ -12,6 +13,7 @@ export const appRoutes = {
   NOT_FOUND: "not_found",
   SETTINGS: "settings",
   NEWS: "news",
+  PRIVILEGES: "privileges",
 };
 
 export const RoutePaths = {
@@ -21,6 +23,7 @@ export const RoutePaths = {
   [appRoutes.NOT_FOUND]: "*",
   [appRoutes.SETTINGS]: "/settings",
   [appRoutes.NEWS]: "/news",
+  [appRoutes.PRIVILEGES]: "/privileges",
 };
 export const RouteConfig = {
   [appRoutes.UNREGISTERED]: {
@@ -46,5 +49,9 @@ export const RouteConfig = {
   [appRoutes.NEWS]: {
     path: RoutePaths.news,
     element: <News />,
+  },
+  [appRoutes.PRIVILEGES]: {
+    path: RoutePaths.privileges,
+    element: <Privileges />,
   },
 };

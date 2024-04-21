@@ -1,17 +1,19 @@
 import React from "react";
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import styles from "./PrivelegesItem.module.css";
+import CustomButton from "../CustomButton/CustomButton";
 
-export default function PrivelegesItem({ title, descr, link }) {
+export default function NewsItem({ title, descr, imgSrc }) {
   return (
-    <Card className={styles.card}>
-      <Card.Body>
-        <Card.Title className={styles.title}>{title}</Card.Title>
-        <Card.Subtitle className={`text-muted ${styles.descr}`}>{descr}</Card.Subtitle>
-        <Card.Link className={styles.link} href={link}>
-          Перейти
-        </Card.Link>
-      </Card.Body>
-    </Card>
+    <div className={styles.cardWrapper}>
+      <img className={styles.img} variant="top" src={imgSrc} />
+      <div className={styles.title}>{title}</div>
+      <div className={styles.descr}>{descr}</div>
+      <div className={styles.buttonWrapper}>
+        <CustomButton color="blue" variant="success">
+          Узнать подробнее
+        </CustomButton>
+      </div>
+    </div>
   );
 }

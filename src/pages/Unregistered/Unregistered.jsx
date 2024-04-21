@@ -7,7 +7,6 @@ import documentsImg from "./../../assets/img/documents.svg";
 import saleImg from "./../../assets/img/sale.svg";
 import studyImg from "./../../assets/img/study.svg";
 import NewsList from "../../components/NewsList/NewsList";
-import Privileges from "../../components/Privileges/Privileges";
 import ciCardImg from "./../../assets/img/ci-card.jpg";
 import CustomButton from "../../components/CustomButton/CustomButton";
 import CardBenefits from "../../components/CardBenefits/CardBenefits";
