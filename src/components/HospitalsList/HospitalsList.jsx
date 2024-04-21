@@ -12,12 +12,12 @@ export default function HospitalsList() {
       descr: "Описание",
     },
     {
-      id: 1,
+      id: 2,
       title: "Клиника государственная",
       descr: "Описание",
     },
     {
-      id: 1,
+      id: 3,
       title: "Клиника государственная",
       descr: "Описание",
     },
@@ -30,20 +30,32 @@ export default function HospitalsList() {
       descr: "Описание",
     },
     {
-      id: 1,
+      id: 2,
       title: "Клиника частная",
       descr: "Описание",
     },
     {
-      id: 1,
+      id: 3,
       title: "Клиника частная",
       descr: "Описание",
     },
   ];
+
   return (
     <Container>
       <div className={styles.title}>Государственные клиники</div>
       {stateHospitals.map((item) => (
+        <HospitalsListItem
+          key={item.id}
+          title={item.title}
+          descr={item.descr}
+          imgSrc={exampleImg}
+        />
+      ))}
+
+      <div className={styles.title}>Частные клиники</div>
+
+      {privateHospitals.map((item) => (
         <HospitalsListItem
           key={item.id}
           title={item.title}
