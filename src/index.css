@@ -1,44 +1,23 @@
+@import url("./css/customReset.css");
+@import url("./css/fonts.css");
+
 :root {
   --text: #01000c;
-  --primary: #50b848;
+  --gray-text: #667479;
+  --accent-text: #3aaa35;
+  --primary: #8253d8;
+  --blue-btn: #00a4e5;
+  --bg-green-200: #e9feec;
+  --bg-blue-200: #e0efff;
+  --bg-purple-200: #e2e4f3;
+  --bg-gray-200: #f1f3f9;
 }
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  color: var(--text);
+  padding-bottom: 100px;
 }

@@ -1,0 +1,33 @@
+.wrapper {
+  margin-top: 16px;
+  width: 100%;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 16px;
+  border: 2px solid #0dcaf0;
+}
+
+.column {
+  width: 50%;
+  flex-shrink: 1;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.descr {
+  color: var(--gray-text);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+}

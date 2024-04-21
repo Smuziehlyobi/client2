@@ -1,0 +1,40 @@
+.button {
+  width: 100%;
+  height: 54px;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #ffffff;
+  border-radius: 9999px;
+  color: #ffffff;
+  margin: 0 auto;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: var(--text);
+}
+
+.violet {
+  border: 3px solid var(--primary);
+  color: var(--primary);
+}
+
+.violet:hover {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.blue {
+  border: 3px solid var(--blue-btn);
+  background-color: var(--blue-btn);
+  color: #ffffff;
+}
+
+.blue:hover {
+  background-color: inherit;
+  color: var(--blue-btn);
+}
