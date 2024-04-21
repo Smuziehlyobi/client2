@@ -1,13 +1,14 @@
 import http from "./http.js";
 import TokenService from "./token.service.js";
+import httpPublic from "./httpPublic.js";
+import {refreshToken} from "../features/auth/authSlice.js";
 
 const setup = store => {
   http.interceptors.request.use(
     config => {
       const token = TokenService.getLocalAccessToken()
       if (token) {
-        config.headers["Authorization"] = "Bearer " + token // for Spring Boot back-end
-        //config.headers['x-access-token'] = token; // for Node.js Express back-end
+        config.headers["Authorization"] = "Bearer " + token // Spring boot style
       }
       return config
     },
