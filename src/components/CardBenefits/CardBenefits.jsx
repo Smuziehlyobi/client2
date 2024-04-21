@@ -3,7 +3,7 @@ import styles from "./CardBenefits.module.css";
 import backpackImg from "./../../assets/img/icons/backpack.svg";
 import bagCheckImg from "./../../assets/img/icons/bag-check.svg";
 import busImg from "./../../assets/img/icons/bus.svg";
-import cardChecklistImg from "./../../assets/img/icons/card-checklist.svg";
+import cardChecklistWhiteImg from "./../../assets/img/icons/card-checklist-white.svg";
 import percent from "./../../assets/img/icons/percent.svg";
 import { Container } from "react-bootstrap";
 
@@ -38,7 +38,7 @@ export default function CardBenefits() {
 
         <li>
           <div className={styles.imgWrapper}>
-            <img src={cardChecklistImg} alt="" className={styles.img} />
+            <img src={cardChecklistWhiteImg} alt="" className={styles.img} />
           </div>
           <div className={styles.text}>Проход и питание в школе или колледже</div>
         </li>
