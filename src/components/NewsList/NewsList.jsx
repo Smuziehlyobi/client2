@@ -1,9 +1,9 @@
 import React from "react";
 import exampleImg from "./../../assets/img/example-img.png";
 import NewsItem from "../NewsItem/NewsItem";
-import styles from "./News.module.css";
+import styles from "./NewsList.module.css";
 
-export default function News() {
+export default function NewsList() {
   const newsList = [
     {
       id: 1,

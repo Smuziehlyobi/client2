@@ -6,7 +6,7 @@ import transportImg from "./../../assets/img/transport.svg";
 import documentsImg from "./../../assets/img/documents.svg";
 import saleImg from "./../../assets/img/sale.svg";
 import studyImg from "./../../assets/img/study.svg";
-import News from "../../components/News/News";
+import NewsList from "../../components/NewsList/NewsList";
 import Privileges from "../../components/Privileges/Privileges";
 import ciCardImg from "./../../assets/img/ci-card.jpg";
 import CustomButton from "../../components/CustomButton/CustomButton";
@@ -30,7 +30,7 @@ export default function Unregistered() {
       </Container>
 
       <CardBenefits />
-      <News />
+      <NewsList />
 
       {/* <img className={styles.logo} src={logo} alt="logo" />
 

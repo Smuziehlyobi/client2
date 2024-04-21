@@ -3,6 +3,7 @@ import Unregistered from "../../../pages/Unregistered/Unregistered.jsx";
 import Login from "../../../pages/Login/Login.jsx";
 import Wallet from "../../../pages/Wallet/Wallet.jsx";
 import Settings from "../../../pages/Settings/Settings.jsx";
+import News from "../../../pages/News/News.jsx";
 
 export const appRoutes = {
   UNREGISTERED: "createcard",
@@ -10,6 +11,7 @@ export const appRoutes = {
   WALLET: "wallet",
   NOT_FOUND: "not_found",
   SETTINGS: "settings",
+  NEWS: "news",
 };
 
 export const RoutePaths = {
@@ -18,6 +20,7 @@ export const RoutePaths = {
   [appRoutes.LOGIN]: "/login",
   [appRoutes.NOT_FOUND]: "*",
   [appRoutes.SETTINGS]: "/settings",
+  [appRoutes.NEWS]: "/news",
 };
 export const RouteConfig = {
   [appRoutes.UNREGISTERED]: {
@@ -39,5 +42,9 @@ export const RouteConfig = {
   [appRoutes.SETTINGS]: {
     path: RoutePaths.settings,
     element: <Settings />,
+  },
+  [appRoutes.NEWS]: {
+    path: RoutePaths.news,
+    element: <News />,
   },
 };
