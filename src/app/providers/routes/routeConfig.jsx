@@ -48,6 +48,7 @@ export const RouteConfig = {
   [appRoutes.WALLET]: {
     path: RoutePaths.wallet,
     element: <Wallet />,
+    isPrivate: true,
   },
   [appRoutes.NOT_FOUND]: {
     path: RoutePaths.not_found,
@@ -56,17 +57,21 @@ export const RouteConfig = {
   [appRoutes.SETTINGS]: {
     path: RoutePaths.settings,
     element: <Settings />,
+    isPrivate: true,
   },
   [appRoutes.NEWS]: {
     path: RoutePaths.news,
     element: <News />,
+    isPrivate: true,
   },
   [appRoutes.PRIVILEGES]: {
     path: RoutePaths.privileges,
     element: <Privileges />,
+    isPrivate: true,
   },
   [appRoutes.HOSPITALS]: {
     path: RoutePaths.hospitals,
     element: <Hospitals />,
+    isPrivate: true,
   },
 };
