@@ -22,7 +22,7 @@ export default function Unregistered() {
         </h2>
 
         <div className={styles.buttonWrapper}>
-          <CustomButton className={styles.getCardButton}>Получить карту</CustomButton>
+          <CustomButton>Получить карту</CustomButton>
         </div>
 
         <img src={ciCardImg} alt="ciCardImg" className={styles.ciCardImg} />

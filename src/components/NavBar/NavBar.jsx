@@ -1,7 +1,7 @@
 import React from "react";
 import Styles from "./NavBar.module.css";
 import wallet from "../../assets/img/icons/wallet-ico.svg";
-import patch from "../../assets/img/icons/patch-check.svg";
+import calendarImg from "../../assets/img/icons/calendar.svg";
 import newspaper from "../../assets/img/icons/newspaper.svg";
 import cardChecklist from "../../assets/img/icons/card-checklist.svg";
 import { Link } from "react-router-dom";
@@ -16,8 +16,8 @@ const NavBar = () => {
         </Link>
       </div>
       <div className={`${Styles.navSlot} ${Styles.bgWhite}`}>
-        <Link to={RoutePaths[appRoutes.NOT_FOUND]} className={`${Styles.navLink}`}>
-          <img src={patch} alt={"#patch"} />
+        <Link to={RoutePaths[appRoutes.PRIVILEGES]} className={`${Styles.navLink}`}>
+          <img src={calendarImg} alt={"#patch"} />
         </Link>
       </div>
       <div className={`${Styles.navSlot} ${Styles.curve}`}>
@@ -29,12 +29,12 @@ const NavBar = () => {
         </Link>
       </div>
       <div className={`${Styles.navSlot} ${Styles.bgWhite}`}>
-        <Link to={RoutePaths[appRoutes.NOT_FOUND]} className={`${Styles.navLink}`}>
+        <Link to={RoutePaths[appRoutes.NEWS]} className={`${Styles.navLink}`}>
           <img src={newspaper} alt={"#newspaper"} />
         </Link>
       </div>
       <div className={`${Styles.navSlot} ${Styles.bgWhite} ${Styles.roundTopRight}`}>
-        <Link to={RoutePaths[appRoutes.NOT_FOUND]} className={`${Styles.navLink}`}>
+        <Link to={RoutePaths[appRoutes.HOSPITALS]} className={`${Styles.navLink}`}>
           <img src={cardChecklist} alt={"#cardChecklist"} />
         </Link>
       </div>

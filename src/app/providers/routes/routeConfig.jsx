@@ -6,6 +6,8 @@ import Settings from "../../../pages/Settings/Settings.jsx";
 import News from "../../../pages/News/News.jsx";
 import Privileges from "../../../pages/Privileges/Privileges.jsx";
 import SignUp from "../../../components/SignUp/SignUp.jsx";
+import Hospitals from "../../../pages/Hospitals/Hospitals.jsx";
+
 
 export const appRoutes = {
   UNREGISTERED: "createcard",
@@ -16,6 +18,7 @@ export const appRoutes = {
   SETTINGS: "settings",
   NEWS: "news",
   PRIVILEGES: "privileges",
+  HOSPITALS: "hospitals",
 };
 
 export const RoutePaths = {
@@ -27,6 +30,7 @@ export const RoutePaths = {
   [appRoutes.SETTINGS]: "/settings",
   [appRoutes.NEWS]: "/news",
   [appRoutes.PRIVILEGES]: "/privileges",
+  [appRoutes.HOSPITALS]: "/hospitals",
 };
 export const RouteConfig = {
   [appRoutes.UNREGISTERED]: {
@@ -60,5 +64,9 @@ export const RouteConfig = {
   [appRoutes.PRIVILEGES]: {
     path: RoutePaths.privileges,
     element: <Privileges />,
+  },
+  [appRoutes.HOSPITALS]: {
+    path: RoutePaths.hospitals,
+    element: <Hospitals />,
   },
 };
