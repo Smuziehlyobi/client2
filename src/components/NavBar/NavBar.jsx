@@ -22,7 +22,7 @@ const NavBar = () => {
       </div>
       <div className={`${Styles.navSlot} ${Styles.curve}`}>
         <Link
-          to={RoutePaths[appRoutes.NOT_FOUND]}
+          to={RoutePaths[appRoutes.QRREADER]}
           role="button"
           className={`${Styles.floatingButton}`}>
           <i className="fa fa-plus"></i>

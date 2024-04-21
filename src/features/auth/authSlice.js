@@ -73,6 +73,14 @@ export const logoutAsync = createAsyncThunk("auth/logout", async () => {
   authService.logout()
 })
 
+export const payForQr = createAsyncThunk("auth/qr", async ()=> {
+  authService.payForQr({
+    "id": 1,
+    "value" : 50000,
+    "name" : "купил подписку"
+  })
+})
+
 export const authSlice = createSlice({
   name: "auth",
   initialState,

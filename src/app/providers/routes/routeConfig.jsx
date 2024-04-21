@@ -7,6 +7,7 @@ import News from "../../../pages/News/News.jsx";
 import Privileges from "../../../pages/Privileges/Privileges.jsx";
 import SignUp from "../../../components/SignUp/SignUp.jsx";
 import Hospitals from "../../../pages/Hospitals/Hospitals.jsx";
+import QrReader from "../../../pages/QrReader/QrReader.jsx";
 
 
 export const appRoutes = {
@@ -19,6 +20,7 @@ export const appRoutes = {
   NEWS: "news",
   PRIVILEGES: "privileges",
   HOSPITALS: "hospitals",
+  QRREADER: "qrReader",
 };
 
 export const RoutePaths = {
@@ -31,6 +33,7 @@ export const RoutePaths = {
   [appRoutes.NEWS]: "/news",
   [appRoutes.PRIVILEGES]: "/privileges",
   [appRoutes.HOSPITALS]: "/hospitals",
+  [appRoutes.QRREADER]: "/qrReader",
 };
 export const RouteConfig = {
   [appRoutes.UNREGISTERED]: {
@@ -72,6 +75,11 @@ export const RouteConfig = {
   [appRoutes.HOSPITALS]: {
     path: RoutePaths.hospitals,
     element: <Hospitals />,
+    isPrivate: true,
+  },
+  [appRoutes.QRREADER]: {
+    path: RoutePaths.qrReader,
+    element: <QrReader />,
     isPrivate: true,
   },
 };

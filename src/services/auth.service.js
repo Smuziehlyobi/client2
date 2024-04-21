@@ -1,5 +1,6 @@
 import TokenService from "./token.service.js";
 import http from "./http.js";
+import {baseApi} from "../api/base.js";
 
 class AuthService {
   async login(username, password) {
@@ -46,6 +47,11 @@ class AuthService {
 
         return response.data
       })
+  }
+
+  async payForQr(body) {
+    return http
+      .post(`${baseApi}cards/payment`)
   }
 }
 
