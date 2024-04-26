@@ -9,7 +9,7 @@ export default function Card() {
         <Badge className={styles.badge} pill bg="info">
           У вас запись к врачу
         </Badge>
-        <div className={styles.balance}>9999 ₽</div>
+        <div className={styles.balance}>2222 ₽</div>
         <div className={styles.name}>Фамилия И. О.</div>
       </div>
       <div className={styles.cardColumn}>
